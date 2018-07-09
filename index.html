@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <style>
+		body {padding: 0; margin: 10px;}
+		a {text-decoration: none; color: black}
+	</style>
+  </head>
+  <body>
+
+	<h1>Visual cryptography</h1>
+	<p><b>Author:</b> Mateusz Grabuszyński</p>
+	<p><b>Programming language:</b> JavaScript, <u><a href="https://p5js.org/">p5js</a></u> library.</p>
+	<p><b>Restrictions:</b> Some browsers and browser extensions can block running scripts. Incognito/InPrivate or other mode can be helpful, as well as adding exception to the extension or turning it off. If still fails, please use other browser.</p>
+
+	<button type="button" id="cipherParent"><a href="cipher.html" target="cipher-decipher">Cipher</a></button>
+	<button type="button" id="decipherParent"><a href="decipher.html" target="cipher-decipher">Decipher</a></button><br />
+
+	<iframe src="cipher.html" name="cipher-decipher" frameborder="0" width="100%-20px" scrolling="no"
+		style="resize: height;"
+        onload="this.style.height=this.contentDocument.body.scrollHeight+20 +'px';"
+        onresize="this.style.height=this.contentDocument.body.scrollHeight+20 +'px';"
+	></iframe>
+  </body>
+</html>

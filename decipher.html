@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <style> body {padding: 0; margin: 0;} </style>
+    <script src="p5.min.js"></script>
+    <script src="p5.dom.min.js"></script>
+    <script src="decipher.js"></script>
+  </head>
+  <body>
+	<h2>Deciphering shares:</h2>
+	<p><b>Input data:</b> Two chains of zeros and ones pasted into "Share 1" and "Share 2" textboxes. 0s and 1s are written by columns, divided by commas. For example, 4x6 table ShareX = 1110,0011,0100,1001,0001,0010 is gonna be unfolded as:<br />
+	100100<br />
+	101000<br />
+	110001<br />
+	010110
+	</p>
+	<p><b>Output data:</b> Deciphered message in visual form.</p>
+
+	<p><b>WARNING!</b> Program does not validate input data. Parsing is being done with confidence, that shares were put correctly, which means:<br />
+	1) Number of columns and rows of the shares is even in both of them,<br />
+	2) Data include only correct values (0/1),<br />
+	3) None of the columns/rows was missing.<br>
+	Other errors can be seen in console (F12 key in most browsers).</p>
+
+	<b><p id="errors" style="color: red"></p></b>
+
+	<div id="sketch-holder"><!--here's the canva--></div>
+
+	<div id="buttons">
+		<p>
+		Share 1: <input type="text" id="share1" name="sh1" />
+		Share 2: <input type="text" id="share2" name="sh2" />
+		<button type="button" id="decipher" onclick="decipher()"> Show shares </button>
+		</p>
+
+		<p>
+		<button type="button" id="overlay-btn" onclick="overlay()" disabled="true"> << Overlap shares </button>
+		</p>
+		
+	</div>
+  </body>
+</html>

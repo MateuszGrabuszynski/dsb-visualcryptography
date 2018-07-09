@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <style> body {padding: 0; margin: 0;} </style>
+    <script src="p5.min.js"></script>
+    <script src="p5.dom.min.js"></script>
+    <script src="cipher.js"></script>
+  </head>
+  <body>
+	<h2>Ciphering message (image) onto shares:</h2>
+	<p>
+	<b>Data size:</b> 'c' and 'r' variables hold number of columns and rows. Values can be defined by user by textboxes and "Set columns/rows" button.</p>
+	<p>
+		Columns: <input type="text" id="colsText" name="cols" size="3" />
+		Rows: <input type="text" id="rowsText" name="rows" size="3" />
+		<button type="button" id="colsRowsSubmit" onclick="setColsRows(colsText.value, rowsText.value)"> Set columns/rows </button>
+	</p>
+	<p><b>Input data:</b> Two dimentional array of zeros (white pixels) and ones (black pixels). User can define pixel value by clicking on it.</p>
+	<p><b>Output data:</b> Two share tables twice as big as input table that can be overlapped to decipher the data.</p>
+
+	<div id="sketch-holder"><!--here's the canva--></div>
+
+	<div id="buttons">
+		<p>
+		<button type="button" id="cipher" onclick="cipher()"> Cipher >> </button>
+		<button type="button" id="overlay" onclick="overlay()"> << Overlap </button>
+		</p>
+	</div>
+  </body>
+</html>
