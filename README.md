@@ -31,3 +31,6 @@ inserted:
 <img src="images/x_to_be_deciphered_inserted.JPG" alt="Image of x rewritten into textboxes." />  
 and overlapped:  
 <img src="images/x_overlapped.JPG" alt="Deciphered x image overlapped." />
+
+## Thanks to
+Daniel Shiffman (https://github.com/shiffman)
