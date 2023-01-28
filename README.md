@@ -1,3 +1,5 @@
+> **Note:** By no means is this code secure or validated. Treat as unchecked copy archived due to no changes planned.
+
 # Visual cryptography
 Program allows ciphering an image onto two separate images (with noise). Only when output images are overlapped, the input image can be deciphered.
 
